@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.reset-btn {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-weight: bold;
+  border: none;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgba(86, 60, 60, 0.5);
+}
