@@ -4,14 +4,33 @@
   padding: 0;
 }
 
-.reset-btn {
+body {
+  font-family: 'Chewy';
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #FFF4E4;
+}
+
+.buttons {
+  grid-column: 1 / 2;
   display: flex;
   justify-content: center;
 }
 
+.grid {
+  grid-column: 2 / 4;
+  margin: 1rem;
+  background-color: white;
+}
+
 button {
-  font-weight: bold;
+  font-family: inherit;
+  font-size: 1.4rem;
   border: none;
+  max-height: 4rem;
   margin: 1rem;
   padding: 1rem 2rem;
   border-radius: 1rem;

@@ -1,5 +1,9 @@
+const BUTTONS_DIV = document.querySelector('.buttons');
+const GRID_DIV = document.querySelector('.grid');
 const RESET_BTN = document.querySelector('.reset-btn');
 
+
+const MAX_PIXELS = 1000;
 let x = 16;
 let y = 16;
 
@@ -24,7 +28,6 @@ function getRandomColor() {
 }
 
 function createGrid(hori, vert) {
-  const MAX_PIXELS = 1000;
   for (let i = 0; i < vert; i++) {
     const DIV_1 = document.createElement('div');
     DIV_1.style.display = "flex";
@@ -39,17 +42,19 @@ function createGrid(hori, vert) {
 
       DIV_2.addEventListener('mouseenter', () => {
         DIV_2.style.backgroundColor = getRandomColor();
+        DIV_2.style.opacity = 1;
+        DIV_2.style.transition = "";
       });
 
       // Revert color when mouse leaves
       DIV_2.addEventListener('mouseleave', () => {
-        DIV_2.style.backgroundColor = 'white';
-      
+        DIV_2.style.opacity = 0;
+        DIV_2.style.transition = "opacity 5s ease-in-out";
       });
 
       DIV_1.appendChild(DIV_2);
     }
-    document.body.appendChild(DIV_1);
+    GRID_DIV.appendChild(DIV_1);
   }
 }
 
