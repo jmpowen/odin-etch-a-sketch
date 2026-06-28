@@ -34,6 +34,8 @@ button {
   margin: 1rem;
   padding: 1rem 2rem;
   border-radius: 1rem;
+  background-color: #739DAE;
+  color: #60B2E5;
 }
 
 button:hover {
